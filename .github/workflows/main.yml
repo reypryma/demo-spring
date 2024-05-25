@@ -63,7 +63,7 @@ jobs:
           docker build . -t demo-spring01.0
           docker images -a
       - name: docker login
-        run: docker login -u {{ secrets.dockerHubUser }} -p {{ secrets.dockerHubPassword }}
+        run: docker login -u ${{ secrets.dockerHubUser }} -p ${{ secrets.dockerHubPassword }}
 
 
     outputs:
