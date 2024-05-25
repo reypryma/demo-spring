@@ -46,6 +46,10 @@ jobs:
       - name: gradle build
         run: gradle build
 
+      # Ensure gradlew has execute permission
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
       - name: gradlew build
         run: ./gradlew build
 
